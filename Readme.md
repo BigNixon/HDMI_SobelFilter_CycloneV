@@ -1,28 +1,6 @@
-# ADV7513 HDMI Transmitter #
+# ADV7513 HDMI Transmitter and Sobel filter #
 
-This is a test for the **ADV7513** chip from Analog Devices which is pretty useful to make an easy compatible **HDMI 1.4** output starting with a common **VGA module**.
+Sobel filter implementation by Marco Winzker https://github.com/Marco-Winzker
+For HDMI chip embedded on de10nano development board is used the test by I2C configuration by nhasbun https://github.com/nhasbun/de10nano_vgaHdmi_chip
 
-It is tested on a **de10 nano** board which has the chip included. **Quartus Prime 17** project is included for an easy deployment of a first working video signal. The project includes:
-
-- Verilog HDL files
-- SDC TimeQuest files por timing analysis
-- Quartus Project files (pin assignment done, etc.)
-
-There is a folder included under **./src/** with simulations done on **Active HDL 9.1** for functional verification of vga module and sync signals.
-
-## I2C Controller ##
-
-The chip needs to be configured via i2c on **every start** to work correctly. I re-used Verilog code included in some Terasic examples for this board to accomplish this.
-
-I found this to be the only tricky part for an smooth vga to hdmi implementation.
-
-## Test ##
-
-Switches of **de10 nano** are being used to control output screen color.
-
-- SW0, Red
-- SW1, Green
-- SW2, Blue
-
-
-
+Generatingg a VGA image and controlling the sobel filter by a switch input
